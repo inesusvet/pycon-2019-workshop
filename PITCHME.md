@@ -1,5 +1,7 @@
+Are you ready, kids?
+---
 @title[title]
-# Build your first slack bot
+# Build your first chat bot
 ## in three hours
 
 #### 2nd edition
@@ -16,6 +18,7 @@ by You and Ivan Styazhkin @ DataRobot
 Are two of nine DataRobot's Core Values
 
 ---
+@title[trains]
 # Trains
 
 ![here comes the train!](assets/trains.jpg)
@@ -26,6 +29,7 @@ Are two of nine DataRobot's Core Values
 ![hold on tight!](assets/train-on-wobbly-tracks.jpg)
 
 ---
+@title[queues]
 # Queues
 
 ![a conveyor](assets/assembling-line.jpg)
@@ -36,6 +40,7 @@ Are two of nine DataRobot's Core Values
 ![back and forth](assets/toyota-queues.jpg)
 
 ---
+@title[brain]
 # Brain
 
 ![processor](assets/nervous2.jpg)
@@ -88,6 +93,7 @@ Test it!
 `(bot-env) $ which pip`
 
 ---
+@title[tools]
 ## Tools
 
 `(bot-env) $ pip install bpython`
@@ -113,11 +119,9 @@ Test it!
 +++
 ## Skeleton
 
-- `if __name__ == '__main__':`
-- `def main():` which
-- Two queue of messages (incoming, outgoing)
-- `import brain`
-- `import transport`
+- Execution ready `if __name__ == '...'`
+- One function `def main()`
+- Two queues of messages (incoming, outgoing)
 
 +++
 ## Main
@@ -131,7 +135,7 @@ Test it!
 ![queues](assets/queue.jpeg)
 
 +++
-## Queues aka FIFO
+## Queues aka FIFO!
 
 _First In - First Out_
 
@@ -144,14 +148,20 @@ _First In - First Out_
   - `.popleft()`
 
 +++
-## Imports
+### Example
 
-- Create an empty python file aka _module_
-- Add `import` statement
-- Test it!
-- Repeat it for another module
+```
+def main():
+    incoming = []
+    outgoing = []
+    return
+
+if __name__ == '__main__':
+    main()
+```
 
 ---
+@title[message]
 ## Message
 
 > Whose properties one Message have?
@@ -159,11 +169,51 @@ _First In - First Out_
 - Text of the message
 
 +++
-## Message
+## Message!
 
 - Create a `class` to hold those attributes
 - Test it!
 - Extra: add `__repr__` method
+
++++
+### Example
+
+```
+class Message(object):
+    def __init__(self, text):
+        self.text = text
+```
+
+---
+## Imports
+
+- Create an empty python file aka _module_
+- Add `import` statement
+- Test it!
+- Repeat it for another module
+
++++
+## Stubs!
+
+- Stub class with two methods
+- Read new messages from API
+- Write messages to API
+- `open` function which instantiate the class
+
++++
+### Example
+
+```
+def open():
+    return StubAPI()
+
+class StubAPI(object):
+    def read(self):
+        return [Message('Que tal?')]
+
+    def write(self, messages):
+        pass
+```
 
 ---
 @title[brain]
@@ -182,7 +232,7 @@ _First In - First Out_
 +++
 ## Processor
 
-- Build a function which takes one message and returns a list of response messages
+- Build a function which takes list of messages and returns a new list of response messages
 - Test it!
 
 +++
@@ -208,7 +258,7 @@ _First In - First Out_
 - Test it!
 - Extra: Extract author's name from the message
 
----
++++
 ### Repeat
 
 - Add two more commands and new responses
@@ -245,6 +295,7 @@ Here goes some [docs](https://core.telegram.org/bots#6-botfather) about it
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z-elPdgxWL0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ---
+@title[connect]
 ### Connect my bot to API
 
 - Install [slackclient](https://slackapi.github.io/python-slackclient/) package with `pip`
@@ -267,7 +318,8 @@ Bot is online while this python script runs
 
 ![excellent!](assets/excellent.jpg)
 
-+++
+---
+@title[listen]
 ### Listen to events
 
 - Try one `read` and one `print` per script run
@@ -281,6 +333,7 @@ Bot is online while this python script runs
 - Stop it by `Ctrl + C`
 
 ---
+@title[respond]
 ### Send answer back
 
 - Extract a channel ID from the message
@@ -288,7 +341,7 @@ Bot is online while this python script runs
 - Test it!
 
 ---
-### Invite it into a channel
+### Invite the bot to a channel
 
 - Make sure that answers posted to the right channel
 - Test it!
@@ -302,20 +355,13 @@ Hip-hip, Hooray!
 ## References
 
 - https://api.slack.com/methods
-- https://github.com/slackapi/python-slackclient
+- https://slackapi.github.io/python-slackclient
 - https://core.telegram.org/bots
-- https://github.com/python-telegram-bot/python-telegram-bot/
+- https://python-telegram-bot.org/
+- https://en.wikipedia.org/wiki/SOLID
 
 ---
 @title[thank you]
 # Thank you
 
 ![dinner time](assets/dinner.gif)
-
-+++
-@title[references]
-# Links
-
-- https://en.wikipedia.org/wiki/SOLID
-- https://slackapi.github.io/python-slackclient
-- https://python-telegram-bot.org/
