@@ -45,7 +45,7 @@ Are two of nine DataRobot's Core Values
 @title[queues]
 # Queues
 
-![a conveyor](assets/assembling-line.jpg)
+![a queue](assets/queue.jpeg)
 
 +++
 ## Factories
@@ -55,11 +55,6 @@ Are two of nine DataRobot's Core Values
 ---
 @title[brain]
 # Brain
-
-![processor](assets/nervous2.jpg)
-
-+++
-## Hack
 
 ![machines](assets/hack-your-brain.jpg)
 
@@ -147,9 +142,9 @@ Create new _virtual environment_
 - Test it!
 
 +++
-## Queues
+## Queue (a conveyor)
 
-![queues](assets/queue.jpeg)
+![assembling-line](assets/assembling-line.jpg)
 
 +++
 ## Queues aka FIFO!
@@ -236,7 +231,7 @@ class StubAPI(object):
 @title[brain]
 ## Brain
 
-![brain](assets/nexosis-brain.jpg)
+![brain](assets/brain.png)
 
 +++
 ## Brain
@@ -285,7 +280,7 @@ class StubAPI(object):
 @title[rails]
 ## Transport tracks
 
-![this is complex](assets/brain-excercises.jpg)
+![this is complex](assets/brain-excersises.jpg)
 
 ---
 @title[slack]
