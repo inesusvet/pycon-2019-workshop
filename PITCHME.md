@@ -18,6 +18,17 @@ by You and Ivan Styazhkin @ DataRobot
 Are two of nine DataRobot's Core Values
 
 ---
+@title[disclaimer]
+## Slang
+
+![what was it?](assets/redis-ca.jpg)
+
++++
+## Pair programming
+
+![make a friend](assets/knight-move.jpg)
+
+---
 @title[trains]
 # Trains
 
@@ -364,4 +375,4 @@ Hip-hip, Hooray!
 @title[thank you]
 # Thank you
 
-![dinner time](assets/dinner.gif)
+![dinner time](assets/dinner-time.jpg)
