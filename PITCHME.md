@@ -79,6 +79,13 @@ Are two of nine DataRobot's Core Values
 - Telegram
 - any other
 
++++
+## Clean Architecture
+
+![layers](assets/layers.png)
+
+by Uncle Bob Martin
+
 ---
 @title[setup]
 ### Setup a python
@@ -99,7 +106,7 @@ Create new _virtual environment_
 +++
 ### Activate it
 
-- `source bot-env/bin/activate`
+- `$ source bot-env/bin/activate`
 - Test it!
 - `(bot-env) $ which python`
 - `(bot-env) $ which pip`
@@ -116,10 +123,10 @@ Create new _virtual environment_
 @title[bootstrap]
 ### Bootstrap
 
-- Create a new python file
-- Test it! Run `python mybotfile.py`
+- Create a new _module_
+- Test it! `$ python mybotfile.py`
 - ???
-- No news? It's good news!
+- No news? It's **good** news!
 - Now let's build a _walking skeleton_
 
 ---
@@ -138,7 +145,7 @@ Create new _virtual environment_
 +++
 ## Main
 
-- Create new function with _one argument_ and immediate `return`
+- Create new _function_ with one _argument_ and immediate `return`
 - Test it!
 
 +++
@@ -179,13 +186,14 @@ if __name__ == '__main__':
 > Whose properties one Message have?
 
 - Text of the message
+- ????
 
 +++
 ## Message!
 
 - Create a `class` to hold those attributes
 - Test it!
-- Extra: add `__repr__` method
+- Extra: add `__repr__` _method_
 
 +++
 ### Example
@@ -197,20 +205,12 @@ class Message(object):
 ```
 
 ---
-## Imports
-
-- Create an empty python file aka _module_
-- Add `import` statement
-- Test it!
-- Repeat it for another module
-
-+++
 ## Stubs!
 
-- Stub class with two methods
-- Read new messages from API
-- Write messages to API
-- `open` function which instantiate the class
+- `open` function which returns _stub instance_
+- _Stub_ class with two methods
+- `read` returns new messages from API
+- `write` takes message list to send to API
 
 +++
 ### Example
@@ -237,14 +237,15 @@ class StubAPI(object):
 ## Brain
 
 - _Keep It Simple_ for start
-- `def process()`
-- `def echo()`
+- `def process(messages)`
+- `def echo(message)`
 - `def teapot()`
 
 +++
 ## Processor
 
-- Build a function which takes list of messages and returns a new list of response messages
+- Build a function which takes a list of messages and returns a new list of response messages
+-
 - Test it!
 
 +++
