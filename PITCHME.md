@@ -12,7 +12,7 @@ by You and Ivan Styazhkin @ DataRobot
 
 +++
 @title[why]
-# Why?
+# Why? What? When?
 > Ensure happiness and productivity of your colleagues
 
 > Always be developing yourself
@@ -82,7 +82,7 @@ Are two of nine DataRobot's Core Values
 +++
 ## Clean Architecture
 
-![layers](assets/layers.png)
+![layers](assets/layers.jpg)
 
 by Uncle Bob Martin
 
