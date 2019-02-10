@@ -1,4 +1,6 @@
 Are you ready, kids?
+
+gitpitch.com/inesusvet/pycon-2019-workshop
 ---
 @title[title]
 # Build your first chat bot
@@ -65,21 +67,28 @@ Are two of nine DataRobot's Core Values
 @title[abstract]
 ## Plan of attack
 
-0. Connect to the API
-1. Read messages from API
-2. Process all messages
+0. Connect to the _API_
+1. Read messages from _API_
+2. Process new messages
   - Decide if we need to respond
-  - Compose the response message
-3. Send responses if required
-4. Repeat from **1**
+  - Compose the response messages
+3. Send responses if any
+4. Repeat
 5. ????
 6. PROFIT!!!!
+
++++
+## Is the API important?
+
+- Slack
+- Telegram
+- any other
 
 ---
 @title[setup]
 ### Setup a python
 
-Test that python is ready
+Test that python interpreter is ready
 
 `$ python --version`
 
@@ -88,20 +97,17 @@ Test that python is ready
 
 See [the installation guide](https://virtualenv.pypa.io/en/latest/installation/)
 
-Create new virtual environment
+Create new _virtual environment_
 
 `$ virtualenv bot-venv`
 
 +++
 ### Activate it
 
-`. bot-env/bin/activate`
-
-Test it!
-
-`(bot-env) $ which python`
-
-`(bot-env) $ which pip`
+- `source bot-env/bin/activate`
+- Test it!
+- `(bot-env) $ which python`
+- `(bot-env) $ which pip`
 
 ---
 @title[tools]
@@ -116,10 +122,10 @@ Test it!
 ### Bootstrap
 
 - Create a new python file
-- Test it! `python mybotfile.py`
+- Test it! Run `python mybotfile.py`
 - ???
 - No news? It's good news!
-- Now let's build a skeleton
+- Now let's build a _walking skeleton_
 
 ---
 @title[skeleton]
@@ -161,7 +167,7 @@ _First In - First Out_
 +++
 ### Example
 
-```
+```python
 def main():
     incoming = []
     outgoing = []
@@ -189,7 +195,7 @@ if __name__ == '__main__':
 +++
 ### Example
 
-```
+```python
 class Message(object):
     def __init__(self, text):
         self.text = text
@@ -214,7 +220,7 @@ class Message(object):
 +++
 ### Example
 
-```
+```python
 def open():
     return StubAPI()
 
@@ -373,6 +379,6 @@ Hip-hip, Hooray!
 
 ---
 @title[thank you]
-# Thank you
+## Thank you
 
 ![dinner time](assets/dinner-time.jpg)
