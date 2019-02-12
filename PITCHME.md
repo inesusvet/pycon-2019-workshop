@@ -1,6 +1,8 @@
 Are you ready, kids?
 
 gitpitch.com/inesusvet/pycon-2019-workshop
+---?image=assets/title.png
+
 ---
 @title[title]
 # Build your first chat bot
