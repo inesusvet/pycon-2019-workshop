@@ -1,4 +1,12 @@
----?image=assets/pycon-logo.png&position=left&size=30%
+
+---
+@snap[north]
+![](assets/datarobot-logo.png)
+@snapend
+
+@snap[west]
+![](assets/pycon-logo.png)
+@snapend
 
 @snap[east]
 Are you ready, kids?
@@ -7,6 +15,7 @@ Are you ready, kids?
 @snap[south]
 gitpitch.com/inesusvet/pycon-2019-workshop
 @snapend
+
 ---?image=assets/clean-title.png&size=cover
 @title[title]
 # Build your first chat bot
