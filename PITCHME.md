@@ -1,5 +1,4 @@
 
----
 @snap[north]
 ![](assets/datarobot-logo.png)
 @snapend
