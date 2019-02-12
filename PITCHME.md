@@ -62,6 +62,11 @@ Are two of nine DataRobot's Core Values
 @title[abstract]
 ## Plan of attack
 
+- ????
+
++++
+## Plan of attack
+
 0. Connect to the _API_
 1. Read messages from _API_
 2. Process new messages
@@ -111,23 +116,47 @@ Create new _virtual environment_
 - `(bot-env) $ which python`
 - `(bot-env) $ which pip`
 
----
-@title[tools]
-## Tools
++++
+## Extra tools
 
 `(bot-env) $ pip install bpython`
 
 `$ pip install --user bpython`
 
 ---
-@title[bootstrap]
 ### Bootstrap
 
 - Create a new _module_
 - Test it! `$ python mybotfile.py`
 - ???
 - No news? It's **good** news!
+- Now let's build a _core_
+
+---
+@title[message]
+## Message
+
+> Whose properties one Message have?
+
+- Text of the message
+- ????
+
++++
+## Message!
+
+- Create a `class` to hold those attributes
+- Test it!
+- Extra: add `__repr__` _method_
 - Now let's build a _walking skeleton_
+
++++
+### Example
+
+```python
+class Message(object):
+    def __init__(self, text):
+        self.text = text
+```
 
 ---
 @title[skeleton]
@@ -136,11 +165,12 @@ Create new _virtual environment_
 ![different kinds](assets/animal-skeletons.jpg)
 
 +++
-## Skeleton
+## Keep It Simple
 
 - Execution ready `if __name__ == '...'`
 - One function `def main()`
 - Two queues of messages (incoming, outgoing)
+- File-like interface for API interaction
 
 +++
 ## Main
@@ -180,37 +210,34 @@ if __name__ == '__main__':
 ```
 
 ---
-@title[message]
-## Message
+@title[files]
+## File is simple
 
-> Whose properties one Message have?
-
-- Text of the message
-- ????
-
-+++
-## Message!
-
-- Create a `class` to hold those attributes
-- Test it!
-- Extra: add `__repr__` _method_
+- `fh = open('..', 'rw')`
+- `fh.read()`
+- `fh.write(text)`
+- `fh.seek(0)`
+- `fh.tell()`
+- `fh.close()`
 
 +++
-### Example
+## File is too much
 
-```python
-class Message(object):
-    def __init__(self, text):
-        self.text = text
-```
+- `fh = open('..', 'rw')`
+- `fh.read()`
+- `fh.write(text)`
+- ~`fh.seek(0)`~
+- ~`fh.tell()`~
+- ~`fh.close()`~
 
 ---
-## Stubs!
+@title[stubs]
+## API stubs!
 
 - `open` function which returns _stub instance_
-- _Stub_ class with two methods
-- `read` returns new messages from API
-- `write` takes message list to send to API
+- And _stub_ class with two methods
+  - `read` returns new messages from API
+  - `write` takes a message list to send them to API
 
 +++
 ### Example
@@ -236,7 +263,7 @@ class StubAPI(object):
 +++
 ## Brain
 
-- _Keep It Simple_ for start
+- _Keep It Simple_ again
 - `def process(messages)`
 - `def echo(message)`
 - `def teapot()`
@@ -245,7 +272,7 @@ class StubAPI(object):
 ## Processor
 
 - Build a function which takes a list of messages and returns a new list of response messages
--
+- Pass message to other functions
 - Test it!
 
 +++
@@ -260,7 +287,7 @@ class StubAPI(object):
 ### Distinguish addressed messages
 
 - Create a function which looks for bot's ID in the text
-- Respond only to addressed messages for now
+- Respond only to addressed messages
 - Test it!
 
 +++
@@ -269,17 +296,17 @@ class StubAPI(object):
 - Threat first word of the text as _a command_
 - Respond to messages with a specific command only
 - Test it!
-- Extra: Extract author's name from the message
 
 +++
 ### Repeat
 
 - Add two more commands and new responses
 - Test it!
+- Extra: Pass author's name as message's attribute
 
 ---
 @title[rails]
-## Transport tracks
+## Transport lines
 
 ![this is complex](assets/brain-excersises.jpg)
 
@@ -308,6 +335,11 @@ Here goes some [docs](https://core.telegram.org/bots#6-botfather) about it
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z-elPdgxWL0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ---
+## Documentation links
+
+- TBD
+
+---
 @title[connect]
 ### Connect my bot to API
 
@@ -330,6 +362,22 @@ Here goes some [docs](https://core.telegram.org/bots#6-botfather) about it
 Bot is online while this python script runs
 
 ![excellent!](assets/excellent.jpg)
+
++++
+### Connect to Telegram
+
+- Install [python-telegram-bot](https://python-telegram-bot.org/) package with `pip`
+- Import `telegram`
+- Create `open` function
+- Initialize `telegram.Bot` object with token
+- Test it!
+
++++
+### Build TelegramAPI class
+
+- `open` function to initialize
+- `read` to fetch messages
+- `write` to send messages
 
 ---
 @title[listen]
