@@ -1,7 +1,7 @@
 Are you ready, kids?
 
 gitpitch.com/inesusvet/pycon-2019-workshop
----?image=assets/title.png
+---?image=assets/title.png&size=contain
 
 ---
 @title[title]
