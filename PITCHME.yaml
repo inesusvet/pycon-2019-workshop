@@ -1,4 +1,3 @@
 background: assets/mascot.png
-background-position: right
+background-size: contain
 background-color: #2f4a55
-background-size: 15% 15%
