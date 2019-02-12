@@ -1,4 +1,4 @@
----?image=assets/pycon-logo.png&position=left&size=30% 30%
+---?image=assets/pycon-logo.png&position=left&size=30%
 
 @snap[east]
 Are you ready, kids?
