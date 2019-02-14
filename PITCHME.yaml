@@ -1,3 +1,5 @@
+theme-override: theme.css
+
 background: assets/bg.png
 background-size: contain
 background-color: "#0e2a35"
