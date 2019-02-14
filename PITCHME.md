@@ -8,7 +8,7 @@
 @snapend
 
 @snap[east]
-Are you ready, kids?
+@color[white](Are you ready, kids?)
 @snapend
 
 @snap[south]
@@ -351,7 +351,8 @@ Here goes some [docs](https://core.telegram.org/bots#6-botfather) about it
 ---
 ## Documentation links
 
-- TBD
+- https://api.slack.com/methods
+- https://slackapi.github.io/python-slackclient
 
 ---
 @title[connect]
