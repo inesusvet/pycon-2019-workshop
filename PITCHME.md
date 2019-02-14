@@ -229,7 +229,7 @@ if __name__ == '__main__':
 
 ---
 @title[files]
-## File is simple
+## File is ...
 
 - `fh = open('..', 'rw')`
 - `fh.read()`
@@ -244,9 +244,6 @@ if __name__ == '__main__':
 - `fh = open('..', 'rw')`
 - `fh.read()`
 - `fh.write(text)`
-- ~`fh.seek(0)`~
-- ~`fh.tell()`~
-- ~`fh.close()`~
 
 ---
 @title[stubs]
