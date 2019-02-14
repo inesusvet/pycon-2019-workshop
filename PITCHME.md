@@ -37,7 +37,7 @@ Are two of nine DataRobot's Core Values
 @title[disclaimer]
 ## Slang
 
-> Этот хендлер свитчит процессинг пейлоада в зависимости от хидеров
+_Этот хендлер свитчит процессинг пейлоада в зависимости от хидеров_
 
 ![what was it?](assets/redis-ca.jpg)
 
