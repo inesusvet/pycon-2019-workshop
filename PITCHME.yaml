@@ -1,4 +1,4 @@
-theme-override: theme.css
+theme-override: assets/theme.css
 
 background: assets/bg.png
 background-size: contain
