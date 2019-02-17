@@ -3,7 +3,7 @@ import collections
 import logging
 import time
 
-import brain
+import deep
 
 logger = logging.getLogger(__name__)
 
@@ -26,12 +26,11 @@ def main(api, sleep_time=5):
         incoming.extend(new_messages)
 
         logger.debug('Processing %d messages from the incoming queue', len(incoming))
-        while incoming:  # While there are incoming messages left
-            message = incoming.popleft()
-            responses = brain.process(message)
-            if responses:
-                logger.debug('Putting %d response messages to the outgoing queue', len(responses))
-                outgoing.extend(responses)
+        responses = deep.process_many(incoming)
+        incoming.clear()
+        if responses:
+            logger.debug('Putting %d response messages to the outgoing queue', len(responses))
+            outgoing.extend(responses)
 
         logger.debug('Sending %d messages from the outgoing queue', len(outgoing))
         while outgoing:

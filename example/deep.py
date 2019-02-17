@@ -1,6 +1,6 @@
 from deeppavlov.skills.pattern_matching_skill import PatternMatchingSkill
 from deeppavlov.agents.default_agent.default_agent import DefaultAgent
-from deeppavlov.agents.processors.highest_confidence_selector import HighestConfidence
+from deeppavlov.agents.processors.highest_confidence_selector import HighestConfidenceSelector
 
 from core import Message
 
