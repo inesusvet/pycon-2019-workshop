@@ -20,7 +20,7 @@ gitpitch.com/inesusvet/pycon-2019-workshop
 # Build your first chat bot
 ## in three hours
 
-#### 2nd edition
+#### 3rd edition
 
 by You and Ivan Styazhkin @ DataRobot
 
@@ -32,21 +32,6 @@ by You and Ivan Styazhkin @ DataRobot
 > Always be developing yourself
 
 Are two of nine DataRobot's Core Values
-
----
-@title[disclaimer]
-## Slang
-
-_Этот хендлер свитчит процессинг пейлоада в зависимости от хидеров_
-
-![what was it?](assets/redis-ca.jpg)
-
-+++
-## Pair programming
-
-_Не задавай вопросов. Просто напиши то, что я говорю_
-
-![make a friend](assets/knight-move.jpg)
 
 ---
 @title[trains]
@@ -344,12 +329,6 @@ Ask @BotFather about it
 Here goes some [docs](https://core.telegram.org/bots#6-botfather) about it
 
 ---
-@title[name]
-### What about the name?
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/z-elPdgxWL0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
----
 ## Documentation links
 
 - https://api.slack.com/methods
@@ -428,19 +407,14 @@ Bot is online while this python script runs
 Hip-hip, Hooray!
 
 ---
-@title[references]
-## References
+@title[thank you]
+## Thank you
 
+References
 - https://api.slack.com/methods
 - https://slackapi.github.io/python-slackclient
 - https://core.telegram.org/bots
 - https://python-telegram-bot.org/
 - https://en.wikipedia.org/wiki/SOLID
-
----
-@title[thank you]
-## Thank you
-
-![dinner time](assets/dinner-time.jpg)
 
 _fb.com/ivan.nesusvet_
